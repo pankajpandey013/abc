@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7" id="abc">
+  <application-name>abc</application-name>
+  <description>Test web application with Spring Boot</description>
+  <display-name>abc</display-name>
+  <module id="abc">
+    <web>
+      <web-uri>abcWeb.war</web-uri>
+      <context-root>/abc</context-root>
+    </web>
+  </module>
+</application>

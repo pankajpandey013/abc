@@ -1,0 +1,62 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>client</groupId>
+    <artifactId>abc</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>abcEar</artifactId>
+  <name>abcEar</name>
+ <packaging>ear</packaging>
+ 
+  <dependencies>
+   <dependency>
+  		<groupId>client</groupId>
+  		<artifactId>abcWeb</artifactId>
+  		<version>1.0.0</version>
+		<type>war</type>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+		<finalName>abcEar</finalName>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+
+					<applicationId>abc</applicationId>
+					<applicationName>abc</applicationName>
+					<displayName>abc</displayName>
+					<generateModuleId>false</generateModuleId>
+
+					<modules>
+						<webModule>
+							<groupId>client</groupId>
+							<artifactId>abcWeb</artifactId>
+							<bundleFileName>abcWeb.war</bundleFileName>
+							<uri>abcWeb.war</uri>
+							<contextRoot>/abc</contextRoot>
+							<moduleId>abc</moduleId>
+						</webModule>
+						
+					</modules>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Version>${version} - ${maven.build.timestamp}</Implementation-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: abcWebApp
+Implementation-Version: 1.0.0 - 2020-02-25T19:45:24+0000
+Built-By: ppandey
+Specification-Title: abcWebApp
+Implementation-Vendor-Id: client
+Build-Jdk: 1.8.0_211
+Specification-Version: 1.0
+Created-By: Maven Integration for Eclipse
+
